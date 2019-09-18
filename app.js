@@ -52,7 +52,7 @@ $(document).ready(function(){
     } else {
         // Select a random quote and show it
         // TODO: the next line is too simple and short. It needs more flare
-        let key = Object.keys(quotes)[Math.ceil(Math.random() * Object.keys(quotes).length)];
+        let key = Object.keys(quotes)[Math.round(Math.random() * Object.keys(quotes).length)];
         $("p#quote").append(quotes[key]);
         $("a#permalink").attr("href", "?quote=" + key);
     }
